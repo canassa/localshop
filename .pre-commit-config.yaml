@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+    - id: black
+      entry: env LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 black  # Workaround for SourceTree not setting environment variables
+      exclude: migrations/
+    language_version: python3.7
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v4.3.18
+    hooks:
+    - id: isort
+      exclude: migrations/
+      additional_dependencies: [toml]
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.7
+    hooks:
+    - id: flake8
+      exclude: migrations/

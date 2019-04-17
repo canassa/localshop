@@ -1,0 +1,10 @@
+-r admin.txt
+black
+flake8
+isort[pyproject]
+pre-commit
+pytest
+pytest-cov
+pytest-django
+pytest-pythonpath
+pytest-lazy-fixture

@@ -1,0 +1,19 @@
+[tool.black]
+line-length = 100
+py37 = true
+exclude = "/migrations/.*"
+
+[tool.isort]
+not_skip = "__init__.py"
+multi_line_output = 3
+skip = "migrations"
+include_trailing_comma = true
+force_grid_wrap = 0
+combine_as_imports = true
+line_length = 100
+known_standard_library = "dataclasses"
+default_section = "THIRDPARTY"
+known_first_party = "localshop"
+known_django = "django"
+known_tests = "tests"
+sections = "FUTURE,STDLIB,DJANGO,THIRDPARTY,FIRSTPARTY,TESTS,LOCALFOLDER"
